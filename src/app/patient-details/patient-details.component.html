@@ -1,0 +1,99 @@
+<nav  class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">{{patientdetails.patientID}}</a>
+    <a class="navbar-info" href="#">PatientID</a>
+  </div>
+</nav><hr>
+
+<h5>Verify patient Details</h5>
+
+<div class="container-fluid">
+  <form>
+    <div class="mb-4">
+      <label for="patientName" class="form-label">Patient Name</label>
+      <input 
+      [(ngModel)] ="patientdetails.patientName"
+        type="text"
+        class="form-control"
+        id="patientName"
+        autocomplete="off"
+        placeholder="Patient Name"
+        
+      />
+    </div>
+    <div class="mb-4">
+      <label for="patientID" class="form-label">PatientID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientID"
+        autocomplete="off"
+        placeholder="Patient ID"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="mobile" class="form-label">Mobile</label>
+      <input
+        type="text"
+        class="form-control"
+        id="mobile"
+        autocomplete="off"
+        placeholder="Enter Mobile Number"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="text"
+        class="form-control"
+        id="age"
+        autocomplete="off"
+        placeholder="Age"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="dateofconsent" class="form-label">Date of consent</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateofconsent"
+        autocomplete="off"
+        placeholder="Date of Consent"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="gender" class="form-label">Gender</label>
+      <input
+        type="text"
+        class="form-control"
+        id="gender"
+        autocomplete="off"
+        placeholder="Gender"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="SEMID" class="form-label">SEMID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="SEMID"
+        autocomplete="off"
+        placeholder="SEMID"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="dailycigarettecount" class="form-label">Daily Cigarette Count</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dailycigarettecount"
+        autocomplete="off"
+        placeholder="Daily Cigarette Count"
+      />
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-secondary">Back</button>
+  </form>
+</div>

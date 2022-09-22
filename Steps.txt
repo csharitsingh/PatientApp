@@ -1,0 +1,30 @@
+//The Whole Procedural approach
+1.Routed the PatientDetail and PatientList in app-routing-module.ts and made PatientList the default landing page.
+2.Wrote router-outlet in app.component.html to display the linked components.
+3.Imported ReactiveForms in app.module.ts
+4.Code the PatientList html and style it  
+
+Create a class for PatientInput types declaration .ts
+Created table for both List and details and added little style to it.Now moving forward
+
+
+hero  :- (property of type Hero )
+Hero :-(Interface)   
+heroes :-(component Property to expose the HEROES array heroes = HEROES)
+HEROES:- (array of interface Hero export const HEROES:Hero[])
+
+{{hero.name}} = to show the name of the hero
+
+
+
+
+
+Add [(ngModel)] in every input to be editable.
+
+
+
+Questions???||
+1. What does the autocomplete="off" function do?
+Ans. It stops the browser from caching the data and stops it from showing later for autocompletion on similar forms.
+
+2. What

@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{TitleID}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex search" role="search">
+          <input class="form-control me-1" type="search" [placeholder]="PatientID" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--<table id="Patient" class="table table-bordered table-hover table-group-divider">
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns" scope="col">{{col}}</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let patient of patients">
+        <td *ngFor ="let col of rows">
+          {{patient[col]}}
+        </td>
+      </tr>
+    </tbody>
+  </table>--->
+
+
+  <table id="Patient" class="table table-bordered table-hover table-group-divider">
+    <thead>
+      <tr>
+        <th>{{'PatientID'}}</th>
+        <th>{{'CenterID'}}</th>
+        <th>{{'HospitalID'}}</th>
+        <th>{{'Age'}}</th>
+        <th>{{'Date of consent'}}</th>
+        <th>{{'Gender'}}</th>
+        <th>{{'SEMID'}}</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let record of PatientD" >
+        <td>{{record?.patientID}}</td>
+        <td>{{record?.centerID}}</td>
+        <td>{{record?.HospitalID}}</td>
+        <td>{{record?.age}}</td>
+        <td>{{record?.dateofconsent}}</td>
+        <td>{{record?.gender}}</td>
+        <td>{{record?.SEMID}}</td>
+        <td><button type="button"(click)="onSelect(record)" routerLink="/patientdetails">Details</button></td>
+      </tr>
+      
+        
+    </tbody>
+  </table>
