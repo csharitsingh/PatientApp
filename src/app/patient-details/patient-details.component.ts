@@ -10,9 +10,10 @@ import { PatientDetailsService } from '../Services/patient-details.service';
 })
 export class PatientDetailsComponent implements OnInit {
   patientdetails : PatientDetailsInterface = {
-    patientID: 1,
+    patientID: 11,
     patientName:"Gojo",
     HospitalID : "AF321" ,
+    mobile: "635590351",
     dateofconsent : "19/09/2022",
     age:21,
     gender:"Male",
@@ -30,6 +31,18 @@ export class PatientDetailsComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap('patientID'));
     this.patientDetailsSevice.getPatient(id).subscribe()
   }*/
+
+  OnSave(){
+
+  }
+
+  OnCancel(){
+
+  }
+
+  OnBack(){
+    
+  }
 
 
 }

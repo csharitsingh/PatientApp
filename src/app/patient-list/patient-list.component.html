@@ -39,6 +39,7 @@
         <th>{{'Date of consent'}}</th>
         <th>{{'Gender'}}</th>
         <th>{{'SEMID'}}</th>
+        <th>ACTION</th>
       </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -50,7 +51,7 @@
         <td>{{record?.dateofconsent}}</td>
         <td>{{record?.gender}}</td>
         <td>{{record?.SEMID}}</td>
-        <td><button type="button"(click)="onSelect(record)" routerLink="/patientdetails">Details</button></td>
+        <td><a routerLink="/patientdetails/{{record.patientID}}"><i class="fa-solid fa-user-pen">Edit</i></a></td>
       </tr>
       
         
