@@ -15,7 +15,10 @@ HEROES:- (array of interface Hero export const HEROES:Hero[])
 
 {{hero.name}} = to show the name of the hero
 
-
+hero => record , patID
+Hero => PatientList
+heroes => patients
+HEROES =>
 
 
 
