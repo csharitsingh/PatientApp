@@ -25,6 +25,8 @@
     <br/>
     <fieldset>
       <div class="columns">
+        <!-- <div *ngFor="let patientD of patientDetails"> -->
+          
         <div class="item">
           <label for="patientName" class="form-label" >Patient Name<span>*</span></label>
           <input id="patientName" class="form-control" type="text" autocomplete="off" value={{patientdetails.patientName}}
@@ -72,6 +74,8 @@
         <button type="submit" class="btn btn-secondary"(click)="OnBack()">Back</button>
         </div>
         
-      </div>
+        </div>
+        
+      <!-- </div> -->
       </fieldset>
     <br/>
