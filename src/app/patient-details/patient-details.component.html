@@ -1,107 +1,77 @@
-<nav  class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><span>Patient ID : </span>{{patientdetails.patientID}}</a>
-    <a class="navbar-info" href="#">PatientID</a>
+<nav class="navbar sticky-top bg-red">
+  <a class="navbar-brand" href="#">PatientID: {{patientdetails.patientID}} Details</a>
+  <a class="navbar-info" href="#">PatientList</a>  
+</nav>
+<div class="card border-0">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="page-header">
+        <div class="title-heading">
+          <h3>Patient Details</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8"></div>
   </div>
-</nav><hr>
-
-<h5>Verify patient Details</h5>
-
-<div class="container-fluid">
-  <form>
-    <div class="mb-4">
-      <label for="patientName" class="form-label">Patient Name</label>
-      <input 
-        type="text"
-        class="form-control"
-        id="patientName"
-        autocomplete="off"
-        value={{patientdetails.patientName}}
-        [(ngModel)]="patientdetails.patientName"
-        
-      />
-    </div>
-    <div class="mb-4">
-      <label for="patientID" class="form-label">PatientID</label>
-      <input
-        type="text"
-        class="form-control"
-        id="patientID"
-        autocomplete="off"
-        value= {{patientdetails.patientID}}
-        [(ngModel)]="patientdetails.patientID"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="mobile" class="form-label">Mobile</label>
-      <input
-        type="text"
-        class="form-control"
-        id="mobile"
-        autocomplete="off"
-        value={{patientdetails.mobile}}
-        [(ngModel)]="patientdetails.mobile"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="age" class="form-label">Age</label>
-      <input
-        type="text"
-        class="form-control"
-        id="age"
-        autocomplete="off"
-        value={{patientdetails.age}}
-        [(ngModel)]="patientdetails.age"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="dateofconsent" class="form-label">Date of consent</label>
-      <input
-        type="date"
-        class="form-control"
-        id="dateofconsent"
-        autocomplete="off"
-        value={{patientdetails.dateofconsent}}
-        [(ngModel)]="patientdetails.dateofconsent"
-
-      />
-    </div>
-    <div class="mb-4">
-      <label for="gender" class="form-label">Gender</label>
-      <input
-        type="text"
-        class="form-control"
-        id="gender"
-        autocomplete="off"
-        value={{patientdetails.gender}}
-        [(ngModel)]="patientdetails.gender"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="SEMID" class="form-label">SEMID</label>
-      <input
-        type="text"
-        class="form-control"
-        id="SEMID"
-        autocomplete="off"
-        value={{patientdetails.SEMID}}
-        [(ngModel)]="patientdetails.SEMID"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="dailycigarettecount" class="form-label">Daily Cigarette Count</label>
-      <input
-        type="text"
-        class="form-control"
-        id="dailycigarettecount"
-        autocomplete="off"
-        value={{patientdetails.dailyCigarettesCount}}
-        [(ngModel)]="patientdetails.dailyCigarettesCount"
-      />
-    </div>
-   
-    <button type="submit" class="btn btn-primary"(click)="OnSave()">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="submit" class="btn btn-danger"(click)="OnCancel()">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="submit" class="btn btn-secondary"(click)="OnBack()">Back</button>
-  </form>
 </div>
+
+<div class="testbox">
+  <form>
+      <div class="card-rounded-0">
+          <div class="card-header bg-light">
+            <span>Patient Details Verification</span>
+          </div>
+        </div>
+    <br/>
+    <fieldset>
+      <div class="columns">
+        <div class="item">
+          <label for="patientName" class="form-label" >Patient Name<span>*</span></label>
+          <input id="patientName" class="form-control" type="text" autocomplete="off" value={{patientdetails.patientName}}
+          [(ngModel)]="patientdetails.patientName"/>
+        </div>
+        <div class="item">
+          <label for="patientID" class="form-label"> PatientID<span>*</span></label>
+          <input class="form-control" id="patientID" type="text" autocomplete="off"  value= {{patientdetails.patientID}}
+          [(ngModel)]="patientdetails.patientID" />
+        </div>
+        <div class="item">
+          <label for="mobile" class="form-label">Mobile<span>*</span></label>
+          <input class="form-control" id="mobile" autocomplete="off" type="text"  value={{patientdetails.mobile}}
+          [(ngModel)]="patientdetails.mobile"/>
+        </div>
+        <div class="item">
+          <label class="form-label"  for="age">Age<span>*</span></label>
+          <input class="form-control"  id="age" type="text" autocomplete="off"  value={{patientdetails.age}}
+          [(ngModel)]="patientdetails.age"/>
+        </div>
+        <div class="item">
+          <label for="dateofconsent">Date of Consent<span>*</span></label>
+          <input class="form-control" id="dateofconsent" type="date" autocomplete="off"  value={{patientdetails.dateofconsent}}
+          [(ngModel)]="patientdetails.dateofconsent"/>
+        </div>
+        <div class="item">
+          <label class="form-label"  for="gender">Gender<span>*</span></label>
+          <input class="form-control"   id="gender" type="text" autocomplete="off"  value={{patientdetails.gender}}
+          [(ngModel)]="patientdetails.gender"/>
+        </div>
+        <div class="item">
+          <label class="form-label" for="SEMID">SEMID<span>*</span></label>
+          <input id="SEMID" type="text" class="form-control" autocomplete="off"  value={{patientdetails.SEMID}}
+          [(ngModel)]="patientdetails.SEMID"/>
+        </div>
+        <div class="item">
+          <label class="form-label"  for="dailycigarettecount">Daily Cigarette Count<span>*</span></label>
+          <input class="form-control"   id="dailycigarettecount" type="tel" autocomplete="off" value={{patientdetails.dailyCigarettesCount}}
+          [(ngModel)]="patientdetails.dailyCigarettesCount"/>
+        </div>
+
+        <div class="button-group">
+        <button type="submit" class="btn btn-primary"(click)="OnSave()">Save</button><span></span>
+        <button type="submit" class="btn btn-danger"(click)="OnCancel()">Cancel</button><span></span>
+        <button type="submit" class="btn btn-secondary"(click)="OnBack()">Back</button>
+        </div>
+        
+      </div>
+      </fieldset>
+    <br/>
