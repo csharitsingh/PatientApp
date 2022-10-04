@@ -9,6 +9,7 @@ import { PatientDetailsService } from '../Services/patient-details.service';
   styleUrls: ['./patient-details.component.css']
 })
 export class PatientDetailsComponent implements OnInit {
+  recordId!:number;
   patientdetails : PatientDetailsInterface = {
     patientID: 11,
     patientName:"Gojo",
@@ -22,9 +23,15 @@ export class PatientDetailsComponent implements OnInit {
   }
   patID !: PatientDetailsInterface
 
-  constructor() { }
+  constructor(
+    private _activatedRoute:ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
+    var id = this._activatedRoute.snapshot.paramMap.get("id");
+    if(id){
+      this.recordId = Number(id);
+    }
   }
 
   /*getPatient():void{

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IpatientList, PatientList , pateintD } from 'src/patient';
 import { PatientListService } from '../Services/patient-list.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient-list',
@@ -14,8 +14,11 @@ export class PatientListComponent implements OnInit {
   PatientD = pateintD;
   selectedPateintList !:PatientList
 
-  constructor(private pService: PatientListService) { }
-
+  constructor(
+    private _router : Router,
+    private _activatedRoute : ActivatedRoute,
+    private pService: PatientListService) { }
+  
   /*changeSelection(record:IpatientList){
     record.$selected =!record.$selected
   }*/
@@ -39,6 +42,15 @@ export class PatientListComponent implements OnInit {
  //rows=["patientID","centerID","HospitalID","age","dateofconsent" , "gender" ,"SEMID"];
 
  patients:PatientList[]=[];
+
+  gotoDetail(record: any):void {
+    if(record) {
+      this._router.navigate(['.' , record.patientID], {relativeTo: this._activatedRoute});
+    }else{
+      this._router.navigate(['.', '0'], {relativeTo: this._activatedRoute})
+    }
+
+  }
 
 
 
